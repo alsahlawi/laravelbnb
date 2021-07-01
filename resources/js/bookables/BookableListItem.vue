@@ -1,7 +1,11 @@
 <template>
-  <div>
-    <h1>{{ itemTitle }}</h1>
-    <p>{{ itemContent }}</p>
+  <div class="card w-100">
+    <div class="card-body">
+      <router-link :to="{ name: 'bookable', params: { id } }">
+        <h1 class="card-title">{{ title }}</h1>
+      </router-link>
+      <p class="card-text">{{ description }}</p>
+    </div>
     <!-- <p>{{ price    }}</p> -->
   </div>
 </template>   
@@ -9,12 +13,10 @@
 <script>
 export default {
   props: {
-    itemTitle: String,
-    itemContent: String,
-    price: Number,
+    title: String,
+    description: String,
+    id: Number,
   },
-  mounted() {
-      
-  },
+  mounted() {},
 };
 </script>
