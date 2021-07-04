@@ -64,7 +64,7 @@ export default {
     //   .catch((result) => console.log(`Error ${result}`));
 
     const request = axios.get("/api/bookables").then((response) => {
-      this.bookables = response.data;
+      this.bookables = response.data.data;
 
       this.loading = false;
     });
